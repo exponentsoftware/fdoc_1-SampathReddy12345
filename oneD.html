@@ -17,18 +17,26 @@
 //     return res.length;
 // }
 const sentence =  `I am a teacher and I love teaching. There is nothing as more rewarding as educating and empowering people. I found teaching more interesting than any other jobs. Does this motivate you to be a teacher?`
-function varietyOfWords(param) {
-      answer = param.split(' ');
-      function onlyUnique(value, index, self) { 
-          return self.indexOf(value) === index;
-      }
+// function varietyOfWords(param) {
+//       answer = param.split(' ');
+//       function onlyUnique(value, index, self) { 
+//           return self.indexOf(value) === index;
+//       }
     
-      var unique = answer.filter( onlyUnique );
+//       var unique = answer.filter( onlyUnique );
     
-      return unique.length;
-    }
+//       return unique.length;
+//     }
   
-    console.log(varietyOfWords(sentence));
+//     console.log(varietyOfWords(sentence));
+
+function varietyOfWords(str) { 
+    return str.split(" ").length;
+  }
+
+  const sample = `I am a teacher and I love teaching. There is nothing as more rewarding as educating and empowering people. I found teaching more interesting than any other jobs. Does this motivate you to be a teacher?`
+  
+  console.log(varietyOfWords(sample));
     </script>
 </body>
 </html>

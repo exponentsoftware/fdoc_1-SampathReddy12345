@@ -21,20 +21,36 @@
         //      } return false; 
             
         //      console.log(checkUniqueness(arrOne));
-        const arrOne = [1, 4, 6, 2, 1];
-        const arrTwo = [1, 4, 6, 2, 3]
-    function checkUniqueness(arr) {
-     for (let i = 0; i < arr.length; i++) {
-        for (let j = 0; j < arr.length; j++) {
-            if(arr[i] !== arr[j]){
-                return true;
-            }else{
-                return false;
-             };
-         };
-     };
-  };
-    console.log(checkUniqueness(arrOne));
+//         const arrOne = [1, 4, 6, 2, 1];
+//         const arrTwo = [1, 4, 6, 2, 3]
+//     function checkUniqueness(arr) {
+//      for (let i = 0; i < arr.length; i++) {
+//         for (let j = 0; j < arr.length; j++) {
+//             if(arr[i] !== arr[j]){
+//                 return true;
+//             }else{
+//                 return false;
+//              };
+//          };
+//      };
+//   };
+//     console.log(checkUniqueness(arrOne));
+function checkUniqueness(arr) {
+
+var unique= arr.filter((value, index) => {
+    arr.indexOf(value) === index;
+})
+
+if(arr === unique){
+    return true
+} else {
+    return false
+}
+}
+const arrOne = [1, 4, 6, 2, 1]
+const arrTwo = [1, 4, 6, 2, 3]
+console.log(checkUniqueness(arrOne))
+
     </script>
 </body>
 </html>

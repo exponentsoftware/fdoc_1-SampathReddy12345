@@ -9,17 +9,29 @@
 <body>
     <script>
         // const sentence =  `I am a teacher and I love teaching. There is nothing as more rewarding as educating and empowering people. I found teaching more interesting than any other jobs. Does this motivate you to be a teacher?`
-        function countWords(sentence) {
-    let res = [];
-    res1 =sentence.split(' ');
-    for(let i=0;i<res1.length;i++) {
-        if(res1[i].length > 1) {
-            res.push(res1[i]);
-        }
-    }
-    return res.length;
-    console.log(countWords(`I am a teacher and I love teaching. There is nothing as more rewarding as educating and empowering people. I found teaching more interesting than any other jobs. Does this motivate you to be a teacher?`));
+       
+//         function countWords(sentence) {
+//     let res = [];
+//     res1 =sentence.split(' ');
+//     for(let i=0;i<res1.length;i++) {
+//         if(res1[i].length > 1) {
+//             res.push(res1[i]);
+//         }
+//     }
+//     return res.length;
+//     console.log(countWords(`I am a teacher and I love teaching. There is nothing as more rewarding as educating and empowering people. I found teaching more interesting than any other jobs. Does this motivate you to be a teacher?`));
+// }
+
+function countingWords (str) {
+	var words = str.split(" ").length;
+    var newstr = str.match(/(\b(\w{1})\b(\s|$))/g,'').length
+    var total;
+    return total = words - newstr
 }
+
+console.log(countingWords(
+    `I am a teacher and I love teaching. There is nothing as more rewarding as educating and empowering people. I found teaching more interesting than any other jobs. Does this motivate you to be a teacher?`
+))
     </script>
 </body>
 </html>
